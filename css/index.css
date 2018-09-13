@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+body{
+    background: #f5f5f5;
+}
+.header{
+    width: auto;
+    height: 0.88rem;
+    background: lightskyblue;
+    font-size: 0.36rem;
+    text-align: center;
+    line-height:0.88rem;
+    color: #fff;
+    position: relative;
+}
+.header .audioBtn{
+    width: 0.88rem;
+    height: 0.88rem;
+    /*background: purple;*/
+    position: absolute;
+    top: 0;
+    right: 0.24rem;
+}
+.audioBtn .icon-laba{
+    font-size: 0.5rem;
+    text-align: center;
+    line-height: 0.88rem;
+    color: #fff;
+}
+.screen{
+    width: auto;
+    height: 8.2rem;
+    background-color: lightskyblue;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+.screen::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/screen.png"),url("../img/wind.png"),url("../img/water .png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+
+}
+.screen .aqi{
+    width: 0.76rem;
+    height: 0.88rem;
+    background: #f0cc35;
+    border-radius: 0.24rem;
+    position: absolute;
+    top: 0.24rem;
+    left: 0.24rem;
+    font-size: 0.3rem;
+    color: #fff;
+    text-align: center;
+}
+.screen h3{
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    position: relative;
+}
+.screen h3::after{
+    content: "°";
+    position: absolute;
+    left: 50%;
+    margin-left: 0.6rem;
+}
+.screen h4{
+    font-size: 0.5rem;
+}
+.screen h5{
+    font-size: 0.3rem;
+}
+.day{
+    width: auto;
+    height: 2rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+.day>div{
+    width: 50%;
+    height: 1.04rem;
+    /*background: darkgray;*/
+    font-size: 0.24rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.day>div span{
+    padding: 0.1rem 0.5rem 0 0.5rem;
+}
+.day>div span img{
+    width: 0.5rem;
+}
+.hours{
+    width: 100%;
+    height: 2.9rem;
+    /*background: orange;*/
+    margin-top: .2rem;
+    overflow-x:auto;
+    overflow-y: hidden;
+}
+.hours::-webkit-scrollbar{
+    display: none;
+}
+.hours .con{
+    width: auto;
+    height: 2.9rem;
+    display: flex;
+}
+.hours .con .box{
+    width: 1.14rem;
+    height: 2.2rem;
+    background: #fff;
+    margin-top: 0.25rem;
+}
+.hours .con .box{
+    font-size: 0.24rem;
+    text-align: center;
+    flex-shrink: 0;
+    line-height: 0.5rem;
+}
+.hours .con .box img{
+    width: 0.48rem;
+    height: 0.48rem;
+    margin-top: 0.2rem;
+}
+.cityBox{
+    width: 100%;
+    height: 100%;
+    background:#fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow-y: auto;
+}
+.cityBox .search{
+    width: auto;
+    height: 0.88rem;
+    margin: 0 0.24rem;
+    /*background: lime;*/
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.cityBox .search input{
+    width: 5rem;
+    height: 0.4rem;
+    padding: 0.1rem 0 0.1rem 0.64rem;
+    background: #e0e0e0;
+    outline: none;
+    border: none;
+    display: block;
+    margin-top: 0.15rem;
+    border-radius: 0.4rem;
+}
+.cityBox .search button{
+    width: 1.3rem;
+    height: 0.88rem;
+    display: block;
+    border: none;
+    outline: none;
+    background: #fff;
+}
+.cityBox h2{
+    padding: 0.24rem;
+    font-size: 0.3rem;
+}
+.cityBox .con{
+    padding: 0 0.2rem;
+    display: flex;
+    align-content:start;
+    flex-wrap: wrap;
+}
+.cityBox .con div{
+    width: 2.0rem;
+    height: 0.5rem;
+    background: #f2f2f2;
+    border-radius: 0.64rem;
+    font-size: 0.24rem;
+    text-align: center;
+    line-height: 0.5rem;
+    margin-bottom: 0.2rem;
+    margin-right: 0.2rem;
+    font-weight: normal;
+}
+/*一周天气*/
+.week{
+    width: 100%;
+    height: 9.28rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+.week>.box>.weekday{
+    width: 100%;
+    height: 9.28rem;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.week>.box>.weekday>.everyday{
+    width: 1.5rem;
+    height:100%;
+    background: #fff;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+}
+.week>.box>.weekday>.everyday>div{
+    width: 100%;
+    font-size: 0.24rem;
+    color: #888888;
+    margin:0.3rem auto 0.2rem auto;
+}
+.sure{
+    width: 100%;
+    height: 2.5rem;
+}
+.empty{
+    width: 100%;
+    height: 2.5rem;
+    background: #fff;
+    position: absolute;
+    top: 3.4rem;
+    left: 0;
+}
+.box{
+    width: 21rem;
+    height: 100%;
+    position: relative;
+}

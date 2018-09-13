@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天气</title>
+    <script src="js/rem.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_774013_q2sgtre6dgk.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="header">
+        <span>北京</span>
+        <div class="audioBtn">
+            <i class="iconfont icon-laba"></i>
+        </div>
+    </div>
+    <div class="screen">
+        <div class="aqi">
+            <span id="aqi-val">60</span>
+            <br>
+            <span id="tomorrow_quality_level">良</span>
+        </div>
+        <h3><span id="current_temperature">27</span></h3>
+        <h4><span id="day_condition">多云</span></h4>
+        <h5><span id="weather_wind_direction">南风 2级</span></h5>
+    </div>
+    <div class="day">
+        <div class="today">
+            <span>今天</span>
+            <span id="weather_high_temperature">29/18</span>
+            <span id="dat_condition">多云</span>
+            <span><img src="img/0.png" alt="" id="dat_weather_icon_id"></span>
+        </div>
+        <div class="tomorrow">
+            <span>明天</span>
+            <span id="tomorrow_weather_high_temperature">29/18</span>
+            <span id="tomorrow_condition">多云</span>
+            <span><img src="img/0.png" alt="" id="tomorrow_weather_icon_id"></span>
+        </div>
+    </div>
+    <div class="hours">
+        <div class="con">
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+            <div class="box">
+                <div>14:00</div>
+                <img src="img/1.png" alt="">
+                <div><span>28</span>°</div>
+            </div>
+        </div>
+    </div>
+    <div class="cityBox">
+        <div class="search">
+            <input type="text" placeholder="搜索地区/景点">
+            <button>确认</button>
+        </div>
+        <!--<h2>河南</h2>-->
+        <!--<div class="con">-->
+            <!--<div>洛阳</div>-->
+            <!--<div>洛阳</div>-->
+            <!--<div>洛阳</div>-->
+            <!--<div>洛阳</div>-->
+            <!--<div>洛阳</div>-->
+            <!--<div>洛阳</div>-->
+        <!--</div>-->
+    </div>
+    <div class="week">
+        <div class="box">
+            <div class="weekday">
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+                <div class="everyday">
+                    <div>星期一</div>
+                    <div>01/15</div>
+                    <div>多云</div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div class="sure"></div>
+                    <div><img src="img/1.png" alt=""></div>
+                    <div>多云</div>
+                    <div>西北风</div>
+                    <div>3级</div>
+                </div>
+            </div>
+            <div class="empty"></div>
+        </div>
+    </div>
+</body>
+</html>
