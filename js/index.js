@@ -119,16 +119,17 @@ $(function () {
                 show:false,
             },
             yAxis: {
-
+                show:false,
             },
             series: [{
-                name: '销量',
                 type: 'line',
                 data: high,
+                color:'blue',
             },{
                 name: '销量',
                 type: 'line',
                 data: low,
+                color:'yellow',
             }],
             grid:{
                 left:0,
